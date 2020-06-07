@@ -1,0 +1,22 @@
+                                                      cloudwatch
+
+
+1)it is used for monitering application
+
+2)what ever the log files are generated from application it will be stored in cloudwatch
+
+the log file for an application of apache2 will be stored in /var/log/apache2/access.log
+
+ * sudo apt-get update
+ * sudo apt-get install apache2
+ * sudo apt-get install python2.7
+ * install cloudwatch log agent for ubuntu 
+
+3)if we want to run cloudwatch agent 1st we have to install python2.7 after that we have to install cloudwatch log agent
+
+4)it will ask the access key and secret access key
+to store the log files in cloudwatch
+
+5)we can create an alaram if any one access to an application continuesly for 50 times from perticular ip and we can generate an Email
+
+6)

@@ -1,0 +1,27 @@
+                                      s3- simple storage service
+* s3 is a global level service
+
+* it is not possible to attach ec2 instance
+
+* it is object based storage we can store and retrive any amount of data, at any time,    from any where.
+
+1) Bucket level properties
+
+    * versioning                 - if we enable the versioning we can retrive previous version                                    file and present version
+    * ACL's -access control list -   
+    * Bucket policy              - bucket polices tells who can able to access that bucket
+    * cross region replication   - Replicate s3 buckets objects from one region to other region                                       bucket
+    * Life cycle roles           - to move the object from one storage class to other storage                                          class. below are the types
+  
+storage classes in s3
+Types
+
+1) s3 standard
+2) s3 standard infrequent access
+3) reduced redendency        - the object stored for 24hours
+4) glacier                   - when ever we are using glacier automatically we are using 
+                                reduced redendency
+5) onezone infrequent access -
+5) one zone infrequent access
+
+ 
