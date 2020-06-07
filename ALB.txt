@@ -1,0 +1,28 @@
+                                      APPLICATION LOAD BALANCER
+
+1)First create the target groups
+  TG-postpaid
+  TG-prepaid
+
+2)Create Application load balancer
+ * when ever we want to attach the group, it will allow to attach only one group to Application load balancer.
+ * when ever we want to create the load balancer we can also create in Application load balancer
+ * if we want to attach multiple things in load balancer there will be lisner option and go to edit option there will be    rules. 
+
+       click on insert rules. ADD PREPAID and POSTPAID follow below rules
+         Go to add condition there will be path enter *prepaid*
+         Go to add action there will be forward to TG-prepaid 
+     For postpaid follow the above 2 rules insted of prepaid keep as postpaid
+ 
+3)Create 3 instances for prepaid in that userdata as given as below in security group add 80 port number
+   
+       #!/bin/bash
+       apt-get update
+       apt-get install apache2 -y
+       mkdir /var/www/html/prepaid
+       cd /var/www/html/prepaid
+       echo prepaid server host is $(hostname) > test.html
+
+4)For postpaid follow above steps in the place of prepaid  type as postpaid 
+ *In targetgroups add instances for particular target
+ *Copy the DNS and paste in web server /prepaid/test.html
